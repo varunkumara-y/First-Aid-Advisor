@@ -1,0 +1,100 @@
+{
+    "cut_bleeding": {
+      "keywords": ["cut", "bleeding", "glass", "injury", "wound"],
+      "steps": [
+        "Wash your hands before touching the wound.",
+        "Apply gentle pressure with a clean cloth to stop the bleeding.",
+        "Clean the wound with water only. Avoid using alcohol or iodine.",
+        "Apply an antibiotic ointment and cover it with a sterile bandage.",
+        "Seek medical help if the bleeding is severe or doesn't stop."
+      ]
+    },
+    "burn_minor": {
+      "keywords": ["burn", "heat", "hot", "stove", "fire"],
+      "steps": [
+        "Cool the burn under running water for 10–15 minutes.",
+        "Do not apply ice, butter, or creams.",
+        "Cover the burn with a sterile, non-stick bandage.",
+        "Take over-the-counter pain relief if needed.",
+        "Seek medical attention if blisters appear or if it covers a large area."
+      ]
+    },
+    "nosebleed": {
+      "keywords": ["nose", "bleeding", "nosebleed"],
+      "steps": [
+        "Sit upright and lean slightly forward.",
+        "Pinch the soft part of the nose continuously for 10–15 minutes.",
+        "Breathe through your mouth while pinching.",
+        "Apply a cold compress to the nose or cheeks.",
+        "Seek medical help if bleeding lasts more than 20 minutes."
+      ]
+    },
+    "choking_adult": {
+      "keywords": ["choke", "choking", "airway", "heimlich", "blocked"],
+      "steps": [
+        "Ask the person if they’re choking and if they can speak.",
+        "If they can't breathe or speak, perform abdominal thrusts (Heimlich maneuver).",
+        "Repeat until the object is expelled or the person becomes unresponsive.",
+        "If unresponsive, start CPR and call emergency services."
+      ]
+    },
+    "fainting": {
+      "keywords": ["faint", "fainting", "unconscious", "dizzy", "collapse"],
+      "steps": [
+        "Help the person lie down and elevate their legs.",
+        "Loosen tight clothing.",
+        "Check for breathing and responsiveness.",
+        "Do not give food or drink until fully recovered.",
+        "Call emergency services if they do not regain consciousness within a minute."
+      ]
+    },
+    "asthma_attack": {
+      "keywords": ["asthma", "inhaler", "wheezing", "breathless"],
+      "steps": [
+        "Sit the person upright and stay calm.",
+        "Help them use their inhaler (usually 1–2 puffs every 30–60 seconds, up to 10 puffs).",
+        "Call emergency services if there's no improvement.",
+        "Keep the person calm and reassured until help arrives."
+      ]
+    },
+    "allergic_reaction": {
+      "keywords": ["allergy", "anaphylaxis", "epipen", "swelling", "reaction"],
+      "steps": [
+        "Call emergency services immediately.",
+        "Use an epinephrine auto-injector (EpiPen) if available.",
+        "Help the person lie down and elevate their legs if possible.",
+        "Do not give them food or drink.",
+        "Perform CPR if they stop breathing."
+      ]
+    },
+    "fracture": {
+      "keywords": ["fracture", "broken", "bone", "swelling", "limb"],
+      "steps": [
+        "Keep the injured area still and supported.",
+        "Apply a cold pack to reduce swelling.",
+        "Do not attempt to straighten or move the broken bone.",
+        "Cover any open wounds with a sterile dressing.",
+        "Seek immediate medical help."
+      ]
+    },
+    "sudden_heart_attack": {
+        "keywords": ["heart attack", "chest pain", "breathing problem", "aspirin", "CPR"],
+        "steps": [
+          "Call the emergency number (like 112 or 911) right away.",
+          "Help the person sit down and stay calm.",
+          "Loosen any tight clothes to help them breathe.",
+          "Ask if they have heart medicine (like nitroglycerin) and help them take it.",
+          "If they are awake and not allergic, give them 1 adult aspirin (325 mg) or 2 small ones (81 mg). Ask them to chew it slowly.",
+          "If they pass out and stop breathing normally, start CPR and use an AED if you have one.",
+          "**CPR Steps:**",
+          "Lay the person flat on their back on the ground.",
+          "Kneel next to their chest and put one hand on top of the other in the middle of their chest.",
+          "Push hard and fast, about 2 inches deep.",
+          "Do chest pushes (compressions) 100 to 120 times per minute (about 2 pushes per second).",
+          "Let the chest rise back up after each push.",
+          "Keep going until help arrives or an AED (a shock machine) is ready."
+        ]
+      }
+    }   
+    
+  
