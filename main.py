@@ -3,41 +3,67 @@ import json
 import base64
 from openai import OpenAI
 
-# === Background Image Function ===
+# === Function to load and encode local background image ===
 def get_base64_image(image_path):
     with open(image_path, "rb") as img_file:
         return base64.b64encode(img_file.read()).decode()
 
-# Load and encode local background image
-bg_image_base64 = get_base64_image("bg1.jpg")  # Update with your image filename
+# === Load background images for light and dark modes ===
+bg_image_light = get_base64_image("bg1.jpg")  # Light background image
+bg_image_dark = get_base64_image("bg2.jpg")   # Dark background image
 
-# === Set Streamlit Page Config ===
+# === Page Config ===
 st.set_page_config(
     page_title="🩹 First Aid Advisor",
     layout="centered",
     initial_sidebar_state="expanded"
 )
 
-# === Inject Background Image and Bold Styling ===
+# === Theme toggle using session_state ===
+if "dark_mode" not in st.session_state:
+    st.session_state.dark_mode = False
+
+# Top-right theme toggle button
+# Theme toggle button - updates immediately on click
+def toggle_theme():
+    st.session_state.dark_mode = not st.session_state.dark_mode
+
+toggle_col = st.columns([10, 1])[1]
+with toggle_col:
+    st.button("🌙" if not st.session_state.dark_mode else "☀️", on_click=toggle_theme)
+
+
+# Set theme-related styles
+if st.session_state.dark_mode:
+    bg_image = bg_image_dark
+    bg_overlay = "rgba(0, 0, 0, 0.8)"
+    font_color = "#fff"
+else:
+    bg_image = bg_image_light
+    bg_overlay = "rgba(255, 255, 255, 0.85)"
+    font_color = "#000"
+
+# === Inject CSS for background and font color ===
 st.markdown(f"""
     <style>
     html, body {{
-        background-image: url("data:image/jpg;base64,{bg_image_base64}");
+        background-image: url("data:image/jpg;base64,{bg_image}");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
         background-attachment: fixed;
+        color: {font_color};
     }}
 
     .stApp {{
-        background-color: rgba(255, 255, 255, 0.85);
+        background-color: {bg_overlay};
         padding: 2rem;
         border-radius: 1rem;
     }}
 
-    /* Bold all visible text */
     h1, h2, h3, h4, h5, h6, label, p, div, span {{
         font-weight: bold !important;
+        color: {font_color} !important;
     }}
     </style>
 """, unsafe_allow_html=True)
